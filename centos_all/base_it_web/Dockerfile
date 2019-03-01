@@ -1,21 +1,7 @@
-# Use an official centos
-FROM centos
+# TO: kj_base_it_web
+FROM kowaraj/test:kj_base_it
 
-# basic
-RUN yum install -y net-tools
-RUN yum install -y iproute
-RUN yum install -y lsof
-
-RUN yum install -y sudo
-RUN yum install -y vim
-RUN yum install -y gcc-c++ make
-RUN yum install -y tmux
-RUN yum install -y git
-RUN yum install -y emacs
-RUN yum install -y python
-RUN yum install -y curl
-
-# it
+# web
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
 RUN export NVM_DIR="$HOME/.nvm"
@@ -41,8 +27,6 @@ EXPOSE 3002
 EXPOSE 3003
 
 
-
-COPY ./.tmux.conf /root/
 
 # Run app.py when the container launches
 CMD ["bash", ""]

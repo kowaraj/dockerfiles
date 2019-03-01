@@ -1,4 +1,4 @@
-# Use an official centos
+# ks_base_it
 FROM kowaraj/test:centos_kj_w_003
 
 # Set the working directory to /app
