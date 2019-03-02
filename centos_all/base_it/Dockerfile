@@ -9,4 +9,4 @@ RUN yum install -y lsof
 
 
 # Run app.py when the container launches
-CMD ["bash", ""]
+CMD "bash"
