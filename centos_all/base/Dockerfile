@@ -5,6 +5,7 @@ FROM centos
 # basic
 RUN yum install -y sudo
 RUN yum install -y vim
+RUN yum install -y map
 RUN yum install -y tmux
 RUN yum install -y git
 RUN yum install -y emacs

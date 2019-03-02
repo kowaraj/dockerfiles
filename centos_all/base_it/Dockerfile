@@ -3,6 +3,7 @@ FROM kowaraj/test:kj_base
 
 # it
 RUN yum install -y net-tools
+RUN yum install -y tcpdump
 RUN yum install -y iproute
 RUN yum install -y lsof
 
