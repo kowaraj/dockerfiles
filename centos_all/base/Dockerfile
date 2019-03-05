@@ -14,6 +14,7 @@ RUN yum install -y emacs
 
 COPY ./.tmux.conf /root/
 COPY ./.emacs /root/
+COPY ./.test /root/
 
 # Run app.py when the container launches
 CMD "bash"
