@@ -14,6 +14,9 @@ RUN bash --version | head -n 1
 RUN curl --version
 # RUN wget --version
 
+COPY ./.emacs /root/
+COPY ./.tmux.conf /root/
+
 # web
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
@@ -59,6 +62,9 @@ RUN bash -c 'source $HOME/.nvm/nvm.sh   && \
     nvm install node                    && \
     npm install -g doctoc urchin eclint dockerfile_lint && \
     npm install --prefix "$HOME/.nvm/"'
+
+COPY ./.emacs /home/nvm/
+COPY ./.tmux.conf /home/nvm/
 
 # Set WORKDIR to nvm directory
 WORKDIR /home/nvm/.nvm
